@@ -8,6 +8,12 @@ A new Flutter project.
 **[Covid Track Api](https://covid-19.dataflowkit.com/ "Covid Track Api")**
 
 **[Icons](https://www.flaticon.com/packs/countrys-flags?k=1610221135638 "Icons")**
+**CREDITS**
+
+------------
+**[Covid Track Api](https://covid-19.dataflowkit.com/ "Covid Track Api")**
+
+**[Icons](https://www.flaticon.com/packs/countrys-flags?k=1610221135638 "Icons")**
 
 
 
