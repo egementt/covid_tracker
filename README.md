@@ -1,6 +1,7 @@
 # covid_tracker
 
 A new Flutter project.
+For fun & learn.
 
 **CREDITS**
 
