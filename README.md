@@ -2,15 +2,19 @@
 
 A new Flutter project.
 
-## Getting Started
+**CREDITS**
 
-This project is a starting point for a Flutter application.
+------------
+**[Covid Track Api](https://covid-19.dataflowkit.com/ "Covid Track Api")**
 
-A few resources to get you started if this is your first Flutter project:
+**[Icons](https://www.flaticon.com/packs/countrys-flags?k=1610221135638 "Icons")**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+**SCREENSHOT**
+
+------------
+
+
+![](https://raw.githubusercontent.com/egementt/covid_tracker/master/screenshots/Screenshot_20210109_222401_com.example.covid_tracker.jpg?token=ARO6FDFBDIHWYZ7IOSOLEQK77IC4I) 
