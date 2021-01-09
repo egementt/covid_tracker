@@ -1,5 +1,9 @@
+
+
 import 'package:covid_tracker/Service/api_service.dart';
-import 'package:covid_tracker/Views/country_card.dart';
+import 'package:covid_tracker/Views/components/country_card.dart';
+import 'package:covid_tracker/Views/components/custom_appbar.dart';
+import 'package:covid_tracker/Views/splash_screen.dart';
 import 'package:covid_tracker/models/covid_data.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +17,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Future<List<CovidData>> _futureList;
-  Future<CovidData> _future;
+  
+ 
 
   ApiService apiService = ApiService();
 
@@ -21,16 +26,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     _futureList = apiService.fetchData();
-    _future = apiService.loadData("world");
+    
   }
 
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Covid19 Tracker "),
-      ),
-      body: _myFuture(context),
-    );
+    
+    return Scaffold(appBar: CustomAppBar(covidData:myCovData ), body: _myFutureList(context) );
   }
 
   _myFutureList(BuildContext context) {
@@ -39,6 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return ListView.builder(
+              padding: EdgeInsets.all(10),
+              
+                scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
                   final _data = snapshot.data[index + 1];
@@ -53,19 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
         });
   }
 
-  _myFuture(BuildContext context) {
-    return FutureBuilder(
-        future: _future,
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            final _data = snapshot.data;
 
-            return myCard(_data, context);
-          } else {
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-        });
-  }
+
+   
 }

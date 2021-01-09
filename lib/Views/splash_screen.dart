@@ -1,11 +1,15 @@
 import 'dart:async';
 import 'dart:ui';
 
+import 'package:covid_tracker/Service/api_service.dart';
+import 'package:covid_tracker/models/covid_data.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 import 'home_view.dart';
+
+CovidData myCovData;
 
 class SplashScreen extends StatefulWidget {
   SplashScreen({Key key}) : super(key: key);
@@ -24,10 +28,16 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    _loadScreen();
     super.initState();
-
-    
+    Future<CovidData> _future = ApiService().loadData("world");
+    _future.then((value) {
+      setState(() {
+        myCovData = value;
+      });
+      
+      print(value);
+      if (myCovData != null) _loadScreen();
+    }, onError: (e) => print(e));
   }
 
   void navigationPage() {

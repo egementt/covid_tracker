@@ -10,13 +10,11 @@ List<CovidData> parseData(String responseBody) {
 
 class ApiService {
   Future<List<CovidData>> fetchData() async {
-    debugPrint("fetchData is running...");
+    
     final response = await http.get("https://covid-19.dataflowkit.com/v1");
 
     if (response.statusCode == 200) {
       if (response.body.isNotEmpty) {
-        debugPrint("Çalışıyor...");
-        debugPrint(response.body);
         return parseData(response.body);
       }
     } else
@@ -35,4 +33,6 @@ class ApiService {
     } else
       return null;
   }
+
+  
 }
