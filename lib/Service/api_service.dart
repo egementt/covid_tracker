@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:covid_tracker/models/covid_data.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
 List<CovidData> parseData(String responseBody) {
@@ -9,6 +8,7 @@ List<CovidData> parseData(String responseBody) {
 }
 
 class ApiService {
+  // ignore: missing_return
   Future<List<CovidData>> fetchData() async {
     
     final response = await http.get("https://covid-19.dataflowkit.com/v1");

@@ -1,8 +1,7 @@
 import 'package:covid_tracker/Views/components/shadowed_flag.dart';
-import 'package:covid_tracker/Views/components/stat_box.dart';
 import 'package:covid_tracker/models/covid_data.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+
 
 Widget myCard(CovidData covidData, BuildContext context) {
   

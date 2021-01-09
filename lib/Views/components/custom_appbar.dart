@@ -1,11 +1,12 @@
 import 'dart:ui';
 
 import 'package:covid_tracker/Views/components/stat_box.dart';
+import 'package:covid_tracker/Views/home_view.dart';
 import 'package:covid_tracker/models/covid_data.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
-  final  covidData;
+  final covidData;
   CustomAppBar({this.covidData});
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,11 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
           backgroundColor: Colors.deepPurple[700],
           elevation: 0.0,
           leading: IconButton(
-              icon: Icon(Icons.menu_rounded), iconSize: 24.0, onPressed: () {}),
+              icon: Icon(Icons.menu_rounded),
+              iconSize: 24.0,
+              onPressed: () {
+                drawerKey.currentState.openDrawer();
+              }),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
         ),

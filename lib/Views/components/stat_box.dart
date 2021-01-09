@@ -27,7 +27,7 @@ Widget globeStatBox(String title, String value, Color color) {
       children: [
         Container(
           height: 70,
-          width: 120,
+          width: 100,
           decoration: BoxDecoration(
               color: color.withOpacity(0.8),
               shape: BoxShape.rectangle,
@@ -41,7 +41,7 @@ Widget globeStatBox(String title, String value, Color color) {
                 padding: const EdgeInsets.all(4.0),
                 child: Text(
                   title,
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14, color: Colors.white),
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12, color: Colors.white),
                 ),
               ),
              
